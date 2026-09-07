@@ -1,17 +1,22 @@
-# flutter_application_27
+# E05-Users
 
-A new Flutter project.
+App Flutter que consume la API de [DummyJSON](https://dummyjson.com/users) para listar usuarios, filtrarlos por color de cabello y ver su detalle. Usa Riverpod para el manejo de estado y un sistema de diseño de tokens de color con soporte de tema claro/oscuro.
 
-## Getting Started
+## Cómo correrlo
 
-This project is a starting point for a Flutter application.
+    git clone https://github.com/Sharif-Garcia/E05-Users.git
+    cd E05-Users/flutter_application_27
+    flutter pub get
+    flutter run
 
-A few resources to get you started if this is your first Flutter project:
+## Estructura
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib/
+├── models/          # Modelos de datos (Hair, User) con fromJson/toJson
+├── providers/        # Providers de Riverpod (usuarios, filtro, tema)
+├── services/          # Acceso HTTP a DummyJSON
+├── theme/              # Tokens de color + ThemeData light/dark
+├── ui/                  # Vistas y widgets
+└── main.dart            # Punto de entrada (ProviderScope)
+```
